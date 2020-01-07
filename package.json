@@ -6,7 +6,6 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
-    "dotenv": "^8.2.0",
     "firebase": "^7.6.1",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
@@ -31,6 +30,7 @@
     "typeface-roboto": "0.0.75"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "prettier": "^1.19.1"
   },
   "keywords": [
