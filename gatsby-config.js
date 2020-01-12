@@ -1,34 +1,45 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Styled Components & Styled System Gatsby Starter Theme`,
+    description: `Gatsby Starter featuring Styled Components and Styled Systems with a well-organized folder structure.`,
+    author: `moshemo`,
   },
   plugins: [
+    // PLUGINS
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-firebase',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        features: {
+          auth: false,
+          database: false,
+          firestore: true,
+          storage: false,
+          messaging: false,
+          functions: false,
+          performance: false,
+        },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `startup-reporter`,
+        short_name: `Starup Reporter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#454545`,
+        theme_color: `#454545`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/img/manifest-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
+    // TRANSFORMERS
+    `gatsby-transformer-sharp`,
   ],
 }
